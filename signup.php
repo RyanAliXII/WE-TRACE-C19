@@ -1,3 +1,9 @@
+<?php
+    include "./classes/signup-contr.classes.php";
+  
+    
+?>
+
 <!DOCTYPE html>
 <html lang="">
   <head>
