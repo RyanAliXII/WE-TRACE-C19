@@ -6,6 +6,9 @@
     <title>LogInForm</title>
     <link rel="stylesheet" href="./static/css/style.css" />
   </head>
+  <style>
+   
+  </style>
   <body>
     <div class="center">
       <h1>Login</h1>

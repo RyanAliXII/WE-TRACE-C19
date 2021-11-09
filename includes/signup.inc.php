@@ -1,4 +1,5 @@
 <?php
+include "/models/user.php";
 
 if(isset($_POST["submit"]))
 {

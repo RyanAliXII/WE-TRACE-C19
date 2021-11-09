@@ -1,8 +1,3 @@
-<?php
-    include "./classes/signup-contr.classes.php";
-  
-    
-?>
 
 <!DOCTYPE html>
 <html lang="">
@@ -12,12 +7,27 @@
     <title>Sign Up</title>
     <link rel="stylesheet" href="static/css/signup.css" />
   </head>
+  <style>
+     .error{
+      color:red;
+    }
+  
+  </style>
   <body>
+    
     <div class="container">
       <div class="title">Registration</div>
-      <form action="includes/signup.inc.php" method="post">
+      <?php
+        session_start();
+          if(!empty($_SESSION['error'])){
+            $error = $_SESSION['error'];
+            echo "<span class='error'> $error </span>";
+            $_SESSION['error'] = '';
+          } 
+       ?>
+      <form action="controller/signup.php" method="POST">
         <div class="user-details">
-          <div class="input-box">
+          <!-- <div class="input-box">
             <span class="details">User Name</span>
             <input
               type="text"
@@ -25,14 +35,13 @@
               placeholder="Enter your username"
               required
             />
-          </div>
+          </div> -->
           <div class="input-box">
             <span class="details">Email</span>
             <input
               type="text"
               name="email"
               placeholder="Enter your email"
-              required
             />
           </div>
 

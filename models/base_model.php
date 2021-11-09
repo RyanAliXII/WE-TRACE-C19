@@ -1,7 +1,7 @@
 <?php
 
     class Model {
-    private $conn;
+    public $conn;
 
     private $servername = "localhost";
     private $username = "root";
@@ -12,7 +12,6 @@
         if (!$this->conn) {
             die("Connection failed: " . mysqli_connect_error());
         }
-        echo "Connected successfully";
     }
 
 
